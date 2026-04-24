@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yrityksen nimi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  --bg: #f7f7f5;
+  --text: #1a1a1a;
+  --muted: #777;
+  --accent: #7a6a58;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+
+  /* hienovarainen grid */
+  background-image:
+    linear-gradient(#ecebe7 1px, transparent 1px),
+    linear-gradient(90deg, #ecebe7 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* HEADER */
+
+header {
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+
+.hero {
+  padding: 140px 20px 100px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+/* SECTION */
+
+.section {
+  max-width: 800px;
+  margin: 120px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* SERVICES */
+
+.service {
+  padding: 40px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.service h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.service p {
+  color: var(--muted);
+  max-width: 600px;
+}
+
+/* ABOUT */
+
+.about p {
+  font-size: 18px;
+}
+
+/* CONTACT */
+
+.contact p {
+  margin: 5px 0;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Eeva ja Ossi Martikaisen tutkimus- ja asiantuntijapalvelut Oy</div>
+  <nav>
+    <a href="#palvelut">Palvelut</a>
+    <a href="#meista">Meistä</a>
+    <a href="#yhteys">Yhteys</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>
+    Rakennettu ympäristö, historia ja analyysi
+  </h1>
+  <p>
+    Rakennushistoriaselvitykset, taidehistorian opetus ja strateginen konsultointi.
+  </p>
+</section>
+
+<section id="palvelut" class="section">
+  <div class="section-title">Palvelut</div>
+
+  <div class="service">
+    <h3>Rakennushistoriaselvitykset</h3>
+    <p>
+      Tuotamme tarkkoja ja tutkimukseen perustuvia selvityksiä rakennusten historiasta,
+      arkkitehtuurista ja kulttuuriarvoista.
+    </p>
+  </div>
+
+  <div class="service">
+    <h3>Taidehistorian opetus</h3>
+    <p>
+      Luentoja ja opetuskokonaisuuksia, jotka avaavat taiteen ja visuaalisen kulttuurin
+      historiallisia kerroksia.
+    </p>
+  </div>
+
+  <div class="service">
+    <h3>Konsultointi</h3>
+    <p>
+      Analyyttinen ja strateginen konsultointi yrityksille, organisaatioille ja
+      yhteiskunnallisille toimijoille.
+    </p>
+  </div>
+
+</section>
+
+<section id="meista" class="section about">
+  <div class="section-title">Meistä</div>
+  <p>
+    Olemme asiantuntijayritys, joka yhdistää arkkitehtuurin, historian ja
+    yhteiskunnallisen analyysin. Työmme perustuu huolelliseen tutkimukseen,
+    kontekstin ymmärtämiseen ja selkeään ajatteluun.
+  </p>
+</section>
+
+<section id="yhteys" class="section contact">
+  <div class="section-title">Yhteys</div>
+  <p>info@sinundomain.fi</p>
+  <p>+358 XX XXX XXXX</p>
+</section>
+
+<footer>
+  © 2026 Yrityksen nimi
+</footer>
+
+</body>
+</html>

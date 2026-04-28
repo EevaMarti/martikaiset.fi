@@ -3,169 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eeva ja Ossi Martikaisen tutkimus- ja asiantuntijapalvelut Oy</title>
 
-<title>Yrityksen nimi</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
-:root {
-  --bg: #f7f7f5;
-  --text: #1a1a1a;
-  --muted: #777;
-  --accent: #7a6a58;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-
-  /* hienovarainen grid */
-  background-image:
-    linear-gradient(#ecebe7 1px, transparent 1px),
-    linear-gradient(90deg, #ecebe7 1px, transparent 1px);
-  background-size: 40px 40px;
+  font-family: 'Nunito', sans-serif;
+  background: white;
+  color: #222;
 }
 
-/* HEADER */
-
-header {
-  padding: 30px 60px;
+.container {
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+}
+
+.people {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  gap: 80px;
+  flex: 1;
 }
 
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  letter-spacing: 1px;
+.person {
+  text-align: center;
 }
 
-nav a {
-  margin-left: 30px;
+.person a {
   text-decoration: none;
-  color: var(--muted);
-  font-size: 14px;
-  position: relative;
+  color: inherit;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 1px;
-  background: var(--accent);
-  left: 0;
-  bottom: -3px;
+.image {
+  width: 260px;
+  height: 320px;
+  background: #ddd;
+  border-radius: 12px;
   transition: 0.3s;
 }
 
-nav a:hover::after {
-  width: 100%;
+.person:hover .image {
+  transform: scale(1.03);
 }
 
-/* HERO */
-
-.hero {
-  padding: 140px 20px 100px;
-  text-align: center;
-  max-width: 900px;
-  margin: auto;
-}
-
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 48px;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  color: var(--muted);
+.name {
+  margin-top: 15px;
   font-size: 18px;
+  font-weight: 600;
 }
 
-/* SECTION */
-
-.section {
-  max-width: 800px;
-  margin: 120px auto;
-  padding: 0 20px;
-}
-
-.section-title {
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 20px;
-}
-
-/* SERVICES */
-
-.service {
-  padding: 40px 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.service h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.service p {
-  color: var(--muted);
-  max-width: 600px;
-}
-
-/* ABOUT */
-
-.about p {
-  font-size: 18px;
-}
-
-/* CONTACT */
-
-.contact p {
-  margin: 5px 0;
-}
-
-/* FOOTER */
-
-footer {
+.footer {
+  background: #6b7280;
+  color: white;
   text-align: center;
-  padding: 80px 20px;
-  color: var(--muted);
-  font-size: 14px;
+  padding: 20px;
+  letter-spacing: 1px;
 }
-
-/* RESPONSIVE */
 
 @media (max-width: 700px) {
-
-  header {
+  .people {
     flex-direction: column;
-    gap: 10px;
+    gap: 40px;
+    padding-top: 40px;
   }
-
-  nav a {
-    margin: 0 10px;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-
 }
 
 </style>
@@ -173,71 +79,31 @@ footer {
 
 <body>
 
-<header>
-  <div class="logo">Eeva ja Ossi Martikaisen tutkimus- ja asiantuntijapalvelut Oy</div>
-  <nav>
-    <a href="#palvelut">Palvelut</a>
-    <a href="#meista">Meistä</a>
-    <a href="#yhteys">Yhteys</a>
-  </nav>
-</header>
+<div class="container">
 
-<section class="hero">
-  <h1>
-    Rakennettu ympäristö, historia ja analyysi
-  </h1>
-  <p>
-    Rakennushistoriaselvitykset, taidehistorian opetus ja strateginen konsultointi.
-  </p>
-</section>
+  <div class="people">
 
-<section id="palvelut" class="section">
-  <div class="section-title">Palvelut</div>
+    <div class="person">
+      <a href="eeva.html">
+        <div class="image"></div>
+        <div class="name">Eeva Martikainen</div>
+      </a>
+    </div>
 
-  <div class="service">
-    <h3>Rakennushistoriaselvitykset</h3>
-    <p>
-      Tuotamme tarkkoja ja tutkimukseen perustuvia selvityksiä rakennusten historiasta,
-      arkkitehtuurista ja kulttuuriarvoista.
-    </p>
+    <div class="person">
+      <a href="ossi.html">
+        <div class="image"></div>
+        <div class="name">Ossi Martikainen</div>
+      </a>
+    </div>
+
   </div>
 
-  <div class="service">
-    <h3>Taidehistorian opetus</h3>
-    <p>
-      Luentoja ja opetuskokonaisuuksia, jotka avaavat taiteen ja visuaalisen kulttuurin
-      historiallisia kerroksia.
-    </p>
+  <div class="footer">
+    Yrityksen nimi
   </div>
 
-  <div class="service">
-    <h3>Konsultointi</h3>
-    <p>
-      Analyyttinen ja strateginen konsultointi yrityksille, organisaatioille ja
-      yhteiskunnallisille toimijoille.
-    </p>
-  </div>
-
-</section>
-
-<section id="meista" class="section about">
-  <div class="section-title">Meistä</div>
-  <p>
-    Olemme asiantuntijayritys, joka yhdistää arkkitehtuurin, historian ja
-    yhteiskunnallisen analyysin. Työmme perustuu huolelliseen tutkimukseen,
-    kontekstin ymmärtämiseen ja selkeään ajatteluun.
-  </p>
-</section>
-
-<section id="yhteys" class="section contact">
-  <div class="section-title">Yhteys</div>
-  <p>info@sinundomain.fi</p>
-  <p>+358 XX XXX XXXX</p>
-</section>
-
-<footer>
-  © 2026 Yrityksen nimi
-</footer>
+</div>
 
 </body>
 </html>
